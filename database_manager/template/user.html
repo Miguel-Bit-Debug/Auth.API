@@ -1,0 +1,12 @@
+<body>
+    <ul>
+        <li>{{ user.id }}</li>
+        <li>{{ user.name }}</li>
+        <li>{{ user.email }}</li>
+        <li>{{ user.profile.photo }}</li>
+    </ul>
+</body>
+
+<nav>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</nav>
