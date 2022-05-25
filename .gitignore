@@ -1,7 +1,7 @@
-*.pyc
 **/*.pyc
+.venv
+.flask-masterclass
 __pycache__
 __pycache__/**
 __pycache__/*.pyc
 __pycache__
-.flask-masterclass

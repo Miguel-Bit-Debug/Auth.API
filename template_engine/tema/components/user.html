@@ -1,0 +1,17 @@
+{% macro user_component(users) %}
+    {% for user in users %}
+        {% set name = user['name'] %}
+        {% set age = user['age'] %}
+        {% set email = user['email'] %}
+        {% set since = user['since'] %}
+        <ul class="list-group list-group-flush mb-5">
+            <li 
+            class="list-group-item {{ 'bg-success' if user['active'] else 'bg-danger'  }}">
+                Nome => {{ name }}
+            </li>
+            <li class="list-group-item">Idade => {{ age }} </li>
+            <li class="list-group-item">E-mail => {{ email }} </li>
+            <li class="list-group-item">Data => {{ since | formatdate }} </li>
+        </ul>
+    {% endfor %}
+{% endmacro %}

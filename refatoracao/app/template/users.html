@@ -1,0 +1,16 @@
+    <body>
+        {% if current_user.is_authenticated%}
+        <a href="{{ url_for('logout') }}">Logout</a>
+        {% else %}
+        <a href="/register">Novo Usuário</a>
+        <a href="/login">Login</a>
+        {% endif %}
+
+        {% for user in users %}
+        <ul>
+            <li>{{ user.name }}</li>
+            <a href="{{ url_for('delete', id=user.id) }}" >Deletar</a>
+            <a href="{{ url_for('info', id=user.id) }}">Info</a>
+        </ul>
+        {% endfor %}
+    </body>

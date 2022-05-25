@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block subtitulo %} Index {% endblock %}
+
+{% block conteudo %}
+    {% include 'components/notification.html' %}
+
+    {% if user_page %}
+        <a href="{{ url_for('users') }}" class="lead">Usuários</a>
+    {% else %}
+        <p class="text-center">
+            Nenhuma página criada!
+        </p>
+    {% endif %}
+
+{% endblock %}
